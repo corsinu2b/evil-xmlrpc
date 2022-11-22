@@ -119,8 +119,12 @@ def main(x,y):
                 
         with open('payload_file', 'a') as z:
             for l in linesInFile:
-                # '&' in password breaks query and causes error, find work around later 
+                # '& or < and >' in password breaks query and causes error, find work around later 
                 if "&" in l:
+                    pass
+                elif "<" in l:
+                    pass
+                elif ">" in l:
                     pass
                 else:
                     payload(user,l)
